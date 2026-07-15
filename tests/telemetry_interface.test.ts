@@ -891,6 +891,7 @@ describe('Telemetry', () => {
         [TelemetryAttributes.QueueName]: queueName,
         [TelemetryAttributes.JobName]: 'testJob',
         [TelemetryAttributes.JobStatus]: 'completed',
+        [TelemetryAttributes.JobState]: 'completed',
       });
 
       await worker.close();
@@ -928,6 +929,7 @@ describe('Telemetry', () => {
         [TelemetryAttributes.QueueName]: queueName,
         [TelemetryAttributes.JobName]: 'testJob',
         [TelemetryAttributes.JobStatus]: 'failed',
+        [TelemetryAttributes.JobState]: 'failed',
       });
 
       await worker.close();
@@ -973,6 +975,7 @@ describe('Telemetry', () => {
         [TelemetryAttributes.QueueName]: queueName,
         [TelemetryAttributes.JobName]: 'testJob',
         [TelemetryAttributes.JobStatus]: 'delayed',
+        [TelemetryAttributes.JobState]: 'delayed',
       });
 
       await worker.close();
